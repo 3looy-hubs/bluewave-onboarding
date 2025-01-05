@@ -40,7 +40,7 @@ const NewLinksPopup = ({
     headerBackgroundColor: "#F8F9F8",
     linkFontColor: "#344054",
     iconColor: "#7F56D9",
-  }
+  };
   const { openDialog, closeDialog, isOpen } = useDialog();
   const fetchHelperData = async () => {
     try {
@@ -48,12 +48,11 @@ const NewLinksPopup = ({
       setHelper(data);
       setLinks(links.sort((a, b) => a.order - b.order));
       setHelperToEdit(itemId);
-    }
-    catch (error) {
+    } catch (error) {
       emitToastError(buildToastError(error));
       closeDialog();
     }
-  }
+  };
 
   useEffect(() => {
     if (autoOpen) {
@@ -79,8 +78,8 @@ const NewLinksPopup = ({
     msg.response
       ? msg
       : {
-        response: { data: { errors: [{ msg }] } },
-      };
+          response: { data: { errors: [{ msg }] } },
+        };
 
   const handleLinks = async (item) => {
     const { id, ...link } = item;

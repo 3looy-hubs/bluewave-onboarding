@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ACTIVITY_TYPES_INFO } from "../../data/guideMainPageData";
-import { deleteHelper, getHelpers} from "../../services/helperLinkService";
+import { deleteHelper, getHelpers } from "../../services/helperLinkService";
 import HelperLinkProvider from "../../services/linksProvider";
 import DefaultPageTemplate from "../../templates/DefaultPageTemplate/DefaultPageTemplate";
 import NewLinksPopup from "./NewLinksPopup";
@@ -16,7 +16,7 @@ const LinksDefaultPage = () => {
     headerBackgroundColor: helper.headerBackgroundColor,
     linkFontColor: helper.linkFontColor,
     iconColor: helper.iconColor,
-  })
+  });
 
   return (
     <>
